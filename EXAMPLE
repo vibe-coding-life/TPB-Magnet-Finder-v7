@@ -1,0 +1,545 @@
+============================================================================
+TPB MAGNET FINDER v7
+============================================================================
+[INFO] Proxy validation threads : 50
+[INFO] Minimum working proxies  : 25
+[INFO] Saved proxy file         : proxies.txt
+[INFO] Input queries            : queries.txt
+[INFO] Magnet output            : magnets.txt
+[INFO] Failed-query output      : failed.txt
+
+============================================================================
+CHECKING SAVED PROXIES FIRST
+============================================================================
+[WARN] proxies.txt does not exist yet.
+[WARN] Only 0 saved proxies survived. Need at least 25.
+
+============================================================================
+HARVESTING FRESH HTTP / SOCKS5 PROXIES
+============================================================================
+[INFO] ProxyScrape HTTP       ->   680 candidates
+[INFO] Monosans SOCKS5        ->   365 candidates
+[INFO] Monosans HTTP          ->   142 candidates
+[INFO] ProxyScrape SOCKS5     ->  1691 candidates
+[INFO] SpeedX HTTP            ->  2575 candidates
+[INFO] SpeedX SOCKS5          ->  2581 candidates
+[INFO] 7296 total unique fresh proxy candidates.
+[INFO] 7296 fresh candidates remain after removing duplicates already present in proxies.txt.
+
+============================================================================
+VALIDATING FRESH PROXIES 1-250 OF 7296
+============================================================================
+[INFO] Testing 250 fresh proxies with 50 concurrent threads...
+[ OK ] socks5://45.74.31.40:9976             4440 ms (1 working)
+[ OK ] http://43.156.40.114:8080             2153 ms (2 working)
+[ OK ] socks5://213.199.47.140:1080          1094 ms (3 working)
+[ OK ] socks5://45.74.31.22:12216            4400 ms (4 working)
+[ OK ] socks5://152.69.211.50:40001          8764 ms (5 working)
+[ OK ] socks5://103.88.234.239:40006         1345 ms (6 working)
+[ OK ] http://85.8.47.198:7080                703 ms (7 working)
+[ OK ] socks5://176.114.199.202:1080         2322 ms (8 working)
+[ OK ] socks5://45.74.31.25:5044             5020 ms (9 working)
+[ OK ] socks5://45.74.31.22:17304            5266 ms (10 working)
+[INFO] Current validated pool: 10 (minimum required: 25)
+
+============================================================================
+VALIDATING FRESH PROXIES 251-500 OF 7296
+============================================================================
+[INFO] Testing 250 fresh proxies with 50 concurrent threads...
+[ OK ] socks5://103.88.234.239:40020         1499 ms (1 working)
+[ OK ] socks5://45.74.31.50:14641            3110 ms (2 working)
+[ OK ] socks5://103.75.118.84:1080           4624 ms (3 working)
+[ OK ] socks5://81.0.49.104:18500             880 ms (4 working)
+[ OK ] http://68.183.88.189:3129             1297 ms (5 working)
+[ OK ] http://43.163.120.171:8080            2172 ms (6 working)
+[ OK ] socks5://101.36.104.239:10808         5158 ms (7 working)
+[ OK ] socks5://45.74.31.47:15979            1721 ms (8 working)
+[ OK ] socks5://45.74.31.22:10595            6469 ms (9 working)
+[ OK ] socks5://45.74.31.41:13397            8868 ms (10 working)
+[ OK ] socks5://195.135.255.98:1080          4530 ms (11 working)
+[ OK ] socks5://125.24.156.113:7080          7459 ms (12 working)
+[ OK ] socks5://172.86.114.5:1080            1758 ms (13 working)
+[ OK ] http://219.148.171.178:9445           5276 ms (14 working)
+[ OK ] socks5://45.194.33.12:30001           4258 ms (15 working)
+[ OK ] http://43.251.225.168:8080            3853 ms (16 working)
+[ OK ] socks5://87.225.107.8:1080            3248 ms (17 working)
+[ OK ] socks5://165.227.220.70:40001          939 ms (18 working)
+[ OK ] socks5://45.74.31.22:9166             8727 ms (19 working)
+[INFO] Current validated pool: 29 (minimum required: 25)
+[ OK ] Saved 29 validated proxies to proxies.txt.
+[ OK ] Proxy pool ready: 29 working proxies (minimum 25).
+
+============================================================================
+SEARCHING 115 QUERIES
+============================================================================
+[INFO] Starting with 29 validated proxies.
+[INFO] Up to 12 different proxies may be tried per query.
+
+[1/115] Lord of War (2005)
+[ OK ] Lord of War (2005) 1080p BrRip x264 - YIFY (168 seeds)
+Active proxies remaining: 29
+
+[2/115] Snatch (2000)
+[ OK ] Snatch 2000 1080p BluRay HEVC H265 5.1 BONE (284 seeds)
+Active proxies remaining: 29
+
+[3/115] Lock, Stock and Two Smoking Barrels (1998)
+[ OK ] Lock, Stock and Two Smoking Barrels (1998) 1080p BrRip x264 - YI (266 seeds)
+Active proxies remaining: 29
+
+[4/115] Layer Cake (2004)
+[ OK ] Layer Cake (2004) 1080p BrRip x264 - YIFY (94 seeds)
+Active proxies remaining: 29
+
+[5/115] The Mechanic (2011)
+[ OK ] The Mechanic (2011) 1080p 5.1 BrRip x264 - Judas (51 seeds)
+Active proxies remaining: 29
+
+[6/115] War Dogs (2016)
+[ OK ] War Dogs 2016 1080p BluRay x264 DTS-JYK (70 seeds)
+Active proxies remaining: 29
+
+[7/115] Pulp Fiction (1994)
+[ OK ] Pulp Fiction (1994) 1080p BrRip x264 - 1.4GB - YIFY (481 seeds)
+Active proxies remaining: 29
+
+[8/115] Blow (2001)
+[ OK ] Blow (2001) 1080p BrRip x264 - YIFY (100 seeds)
+Active proxies remaining: 29
+
+[9/115] The Wolf of Wall Street (2013)
+[ OK ] The Wolf of Wall Street (2013) 1080p BrRip x264 - YIFY (760 seeds)
+Active proxies remaining: 29
+
+[10/115] American Made (2017)
+[ OK ] American.Made.2017.1080p.BluRay.x264.MkvCage Maid [GoodFilms] (97 seeds)
+Active proxies remaining: 29
+
+[11/115] Law Abiding Citizen (2009)
+[ OK ] Law Abiding Citizen (2009) 1080p BrRip x264 - YIFY (135 seeds)
+Active proxies remaining: 29
+
+[12/115] Shot Caller (2017)
+[ OK ] Shot.Caller.2017.1080p.BluRay.H264.AAC (83 seeds)
+Active proxies remaining: 29
+
+[13/115] The Town (2010)
+[ OK ] The Town Extended (2010) 1080p BrRip x264 - 2.30GB - YIFY (143 seeds)
+Active proxies remaining: 29
+
+[14/115] Legend (2015)
+[ OK ] Legend.2015.1080p.BRRip.x264.AAC-ETRG (103 seeds)
+Active proxies remaining: 29
+
+[15/115] Den of Thieves (2018)
+[ OK ] Den of Thieves 2018 UNRATED 720p BluRay HEVC x265-RMTeam (57 seeds)
+Active proxies remaining: 29
+
+[16/115] Rise of the Footsoldier (2007)
+[ OK ] Rise of the Footsoldier (2007) 1080p BrRip x264 - YIFY (12 seeds)
+Active proxies remaining: 29
+
+[17/115] Football Factory (2004)
+[ OK ] The Football Factory (2004) BDRip 1080p (18 seeds)
+Active proxies remaining: 29
+
+[18/115] The Business (2005)
+[ OK ] The Business 2005 1080p BluRay HEVC H265 5.1 BONE (4 seeds)
+Active proxies remaining: 29
+
+[19/115] American Gangster (2007)
+[ OK ] American Gangster (2007) 1080p BrRip x264 - YIFY (107 seeds)
+Active proxies remaining: 29
+
+[20/115] Training Day (2001)
+[ OK ] Training Day 2001 BrRip 1080p x264 - 1.6GB -  YIFY (125 seeds)
+Active proxies remaining: 29
+
+[21/115] Goodfellas (1990)
+[ OK ] Goodfellas 1990 Remastered 1080p BluRay HEVC x265 5.1 BONE (403 seeds)
+Active proxies remaining: 29
+
+[22/115] Crime 101 (2026)
+[ OK ] Crime 101 2026 1080p WEB Line HEVC x265 BONE (1174 seeds)
+Active proxies remaining: 29
+
+[23/115] This Is England (2006)
+[ OK ] This Is England (2006) + Extras (1080p BluRay x265 HEVC 10bit AA (46 seeds)
+Active proxies remaining: 29
+
+[24/115] No Country for Old Men (2007)
+[ OK ] No Country For Old Men (2007) 1080p BrRip x264 - 1.6GB - YIFY (463 seeds)
+Active proxies remaining: 29
+
+[25/115] Sicario (2015)
+[ OK ] Sicario 2015 1080p BluRay x264 AC3-JYK (353 seeds)
+Active proxies remaining: 29
+
+[26/115] Sicario 2: Soldado (2018)
+[ OK ] Sicario.Day.Of.The.Soldado.2018.1080p.BluRay.x264 (160 seeds)
+Active proxies remaining: 29
+
+[27/115] Man on Fire (2004)
+[ OK ] Man On Fire 2004 1080p BluRay HEVC x265 5.1 BONE (103 seeds)
+Active proxies remaining: 29
+
+[28/115] Jarhead (2005)
+[ OK ] Jarhead (2005) (1080p BluRay x265 HEVC 10bit AAC 5 1 afm72) (110 seeds)
+Active proxies remaining: 29
+
+[29/115] Deepwater Horizon (2016)
+[ OK ] Deepwater Horizon 2016 1080p WEB-DL HEVC 2CH x265 (50 seeds)
+Active proxies remaining: 29
+
+[30/115] Captain Phillips (2013)
+[ OK ] Captain Phillips (2013) 1080p BrRip x264 - YIFY (118 seeds)
+Active proxies remaining: 29
+
+[31/115] Gladiator (2000)
+[ OK ] Gladiator (2000) [EXTENDED] 1080p BrRip x264 - 1.6GB - YIFY (533 seeds)
+Active proxies remaining: 29
+
+[32/115] Gladiator 2 (2024)
+[ OK ] Gladiator II (2024) [1080p] [WEBRip] [5.1] (436 seeds)
+Active proxies remaining: 29
+
+[33/115] Triple Frontier (2019)
+[WARN] Disabled socks5://81.0.49.104:18500 after 3 search failures.
+[ OK ] Triple.Frontier.2019.1080p.WEBRip.x264-MP4 (99 seeds)
+Active proxies remaining: 28
+
+[34/115] Saving Private Ryan (1998)
+[ OK ] Saving Private Ryan (1998) 1080p BrRip x264 - YIFY (288 seeds)
+Active proxies remaining: 28
+
+[35/115] Inglourious Basterds (2009)
+[ OK ] Inglourious.Basterds.2009.1080p.BluRay.HEVC-Inglorious Bastards (363 seeds)
+Active proxies remaining: 28
+
+[36/115] World War Z (2013)
+[ OK ] World War Z (2013) UNRATED 1080p BrRip x264 - YIFY (165 seeds)
+Active proxies remaining: 28
+
+[37/115] 28 Days Later (2002)
+[ OK ] 28.Days.Later.2002.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265 (556 seeds)
+Active proxies remaining: 28
+
+[38/115] 28 Weeks Later (2007)
+[ OK ] 28 Weeks Later (2007) (1080p BluRay x265 HEVC 10bit AAC 5.1 Tigo (167 seeds)
+Active proxies remaining: 28
+
+[39/115] Flight (2012)
+[WARN] Disabled socks5://176.114.199.202:1080 after 3 search failures.
+[ OK ] Flight (2012) 1080p BrRip x264 - YIFY (111 seeds)
+Active proxies remaining: 27
+
+[40/115] Black Hawk Down (2001)
+[WARN] Disabled socks5://87.225.107.8:1080 after 3 search failures.
+[ OK ] Black Hawk Down (2001) 1080p BrRip x264 - 1.90GB - YIFY (130 seeds)
+Active proxies remaining: 26
+
+[41/115] I Am Legend (2007)
+[ OK ] I Am Legend ALTERNATE ENDING (2007) 1080p BrRip x264 - 1.40GB - (153 seeds)
+Active proxies remaining: 26
+
+[42/115] Edge of Tomorrow (2014)
+[ OK ] Edge of Tomorrow (2014) 1080p BrRip x264 - YIFY (363 seeds)
+Active proxies remaining: 26
+
+[43/115] Greenland (2020)
+[ OK ] Greenland (2020) [720p] [BluRay] (98 seeds)
+Active proxies remaining: 26
+
+[44/115] Greenland: Migration (2025)
+[WARN] Disabled socks5://195.135.255.98:1080 after 3 search failures.
+[WARN] No results.
+
+[45/115] The Amateur (2025)
+[ OK ] The Amateur (2025) [1080p] [WEBRip] [5.1] [YTS.MX] (262 seeds)
+Active proxies remaining: 25
+
+[46/115] The Accountant (2016)
+[ OK ] The.Accountant.2016.720p.BRRip.x264.AAC-ETRG (94 seeds)
+Active proxies remaining: 25
+
+[47/115] The Accountant 2 (2025)
+[WARN] Disabled socks5://45.74.31.22:17304 after 3 search failures.
+[ OK ] The Accountant 2 (2025) [720p] [WEBRip] [YTS.MX] (319 seeds)
+Active proxies remaining: 24
+
+[48/115] The Beekeeper (2024)
+[WARN] Disabled socks5://45.74.31.22:10595 after 3 search failures.
+[ OK ] The Beekeeper (2024) [1080p] [WEBRip] [5.1] (422 seeds)
+Active proxies remaining: 23
+
+[49/115] The Shawshank Redemption (1994)
+[WARN] Disabled socks5://45.74.31.22:9166 after 3 search failures.
+[ OK ] The Shawshank Redemption (1994) 1080p BrRip - 1.6GB - YIFY (677 seeds)
+Active proxies remaining: 22
+
+[50/115] Limitless (2011)
+[ OK ] Limitless (2011) 1080p BrRip x264 - YIFY (377 seeds)
+Active proxies remaining: 22
+
+[51/115] Don't Look Up (2021)
+[WARN] No results.
+
+[52/115] Fight Club (1999)
+[ OK ] Fight Club (1999) 1080p BrRip x264 - YIFY (658 seeds)
+Active proxies remaining: 22
+
+[53/115] The Butterfly Effect (2004)
+[ OK ] The.Butterfly.Effect.2004.DC.1080p.BluRay.AAC-tomcat12[ETRG] (98 seeds)
+Active proxies remaining: 22
+
+[54/115] The Girl Next Door (2004)
+[ OK ] The Girl Next Door UNRATED (2004) 1080p BrRip x264 - YIFY (72 seeds)
+Active proxies remaining: 22
+
+[55/115] Shutter Island (2010)
+[ OK ] Shutter.Island.2010.1080p.BluRay.DDP5.1.x265.10bit-GalaxyRG265 (503 seeds)
+Active proxies remaining: 22
+
+[56/115] Uncut Gems (2019)
+[ OK ] Uncut.Gems.2019.1080p.BluRay.1600MB.DD5.1.x264-GalaxyRG (121 seeds)
+Active proxies remaining: 22
+
+[57/115] Catch Me If You Can (2002)
+[ OK ] Catch Me If You Can 2002 REMASTERED 1080p BluRay HEVC x265 5.1 BONE (290 seeds)
+Active proxies remaining: 22
+
+[58/115] The Book of Eli (2010)
+[ OK ] The Book of Eli (2010) 1080p BrRip x264 - 1.50GB - YIFY (151 seeds)
+Active proxies remaining: 22
+
+[59/115] American History X (1998)
+[WARN] Disabled http://43.156.40.114:8080 after 3 search failures.
+[ OK ] American History X (1998) 1080p BluRay 5.1Ch x265 HEVC SUJAIDR (151 seeds)
+Active proxies remaining: 21
+
+[60/115] Shelter (2026)
+[ OK ] Shelter.2026.1080p.WEBRip.10Bit.DDP.5.1.x265-NeoNoir (454 seeds)
+Active proxies remaining: 21
+
+[61/115] Land of the Lost (2009)
+[ OK ] Land of the Lost (2009) 1080p BrRip x264 - 1.50GB - YIFY (62 seeds)
+Active proxies remaining: 21
+
+[62/115] The Hangover (2009)
+[ OK ] The Hangover (2009)UNRATED 720p BrRip x264 - 600MB - YIFY (118 seeds)
+Active proxies remaining: 21
+
+[63/115] The Hangover Part II (2011)
+[ OK ] The Hangover Part II (2011) 720p BrRip x264 - 650MB - YIFY (44 seeds)
+Active proxies remaining: 21
+
+[64/115] The Hangover Part III (2013)
+[ OK ] The Hangover Part III (2013) 1080p BrRip x264 - YIFY (129 seeds)
+Active proxies remaining: 21
+
+[65/115] Idiocracy (2006)
+[ OK ] Idiocracy 2006 1080p WEB-DL HEVC x265 5.1 BONE (586 seeds)
+Active proxies remaining: 21
+
+[66/115] Pineapple Express (2008)
+[ OK ] Pineapple Express UNRATED (2008) 1080p BrRip x264 - YIFY (110 seeds)
+Active proxies remaining: 21
+
+[67/115] Hot Fuzz (2007)
+[ OK ] Hot Fuzz (2007) 1080p BrRip x264 - YIFY (278 seeds)
+Active proxies remaining: 21
+
+[68/115] Filth (2013)
+[ OK ] Filth 2013 1080p WEB-DL HEVC x265-RMTeam (36 seeds)
+Active proxies remaining: 21
+
+[69/115] Four Lions (2010)
+[ OK ] Four Lions (2010) 1080p BrRip x264 - YIFY (80 seeds)
+Active proxies remaining: 21
+
+[70/115] The Inbetweeners Movie (2011)
+[ OK ] The Inbetweeners Movie (2011) EXTENDED 720p BluRay - YIFY (32 seeds)
+Active proxies remaining: 21
+
+[71/115] The 40-Year-Old Virgin (2005)
+[ OK ] The 40 Year Old Virgin 2005 UNRATED 1080p BluRay HEVC x265 5.1 BONE (126 seeds)
+Active proxies remaining: 21
+
+[72/115] Meet the Parents (2000)
+[ OK ] Meet the Parents 2000 REMASTERED 1080p BluRay HEVC x265 5.1 BONE (102 seeds)
+Active proxies remaining: 21
+
+[73/115] Meet the Fockers (2004)
+[ OK ] Meet the Fockers 2004 REMASTERED 1080p BluRay HEVC x265 5.1 BONE (89 seeds)
+Active proxies remaining: 21
+
+[74/115] Click (2006)
+[ OK ] Click (2006) 1080p BrRip x264 - YIFY (93 seeds)
+Active proxies remaining: 21
+
+[75/115] The Invite (2026)
+[WARN] Disabled http://68.183.88.189:3129 after 3 search failures.
+[ OK ] The Invite (2026) [1080p] [WEBRip] [5.1] (4126 seeds)
+Active proxies remaining: 20
+
+[76/115] Superbad (2007)
+[ OK ] Superbad 2007 Unrated 1080p BluRay (Multi Audio) HEVC H265 BONE (89 seeds)
+Active proxies remaining: 20
+
+[77/115] Step Brothers (2008)
+[ OK ] Step Brothers 2008 UNRATED 1080p BluRay HEVC x265 5.1 BONE (145 seeds)
+Active proxies remaining: 20
+
+[78/115] Role Models (2008)
+[ OK ] Role.Models.2008.UNRATED.1080p.BluRay.x264.AC3-ETRG (47 seeds)
+Active proxies remaining: 20
+
+[79/115] Knocked Up (2007)
+[ OK ] Knocked.Up.2007.UNRATED.1080p.BluRay.x264.AC3-ETRG (90 seeds)
+Active proxies remaining: 20
+
+[80/115] Get Him to the Greek (2010)
+[ OK ] Get Him To The Greek 2010 1080p Unrated BluRay HEVC x265 5.1 BONE (42 seeds)
+Active proxies remaining: 20
+
+[81/115] The Other Guys (2010)
+[ OK ] The Other Guys (2010) 1080p BrRip x264 - 1.50GB - YIFY (104 seeds)
+Active proxies remaining: 20
+
+[82/115] Shaun of the Dead (2004)
+[ OK ] Shaun of the Dead (2004) (1080p Brrip x265 HEVC 10bit AAC 7.1) (112 seeds)
+Active proxies remaining: 20
+
+[83/115] Forrest Gump (1994)
+[ OK ] Forrest Gump (1994) 1080p BrRip x264 - 1.90GB - YIFY (388 seeds)
+Active proxies remaining: 20
+
+[84/115] The Green Mile (1999)
+[ OK ] The Green Mile (1999) 1080p BrRip x264 - 2.50GB - YIFY (245 seeds)
+Active proxies remaining: 20
+
+[85/115] Good Will Hunting (1997)
+[ OK ] Good Will Hunting (1997) 1080p BrRip x264 - YIFY (547 seeds)
+Active proxies remaining: 20
+
+[86/115] Titanic (1997)
+[ OK ] Titanic (1997) 1080p HDTV x264 - 2.1GB - YIFY (126 seeds)
+Active proxies remaining: 20
+
+[87/115] The Social Network (2010)
+[ OK ] The Social Network (2010) 1080p BrRip x264 - 1.2GB - YIFY (429 seeds)
+Active proxies remaining: 20
+
+[88/115] 8 Mile (2002)
+[ OK ] 8.Mile.2002.1080p.BluRay.H264.AAC-RARBG (134 seeds)
+Active proxies remaining: 20
+
+[89/115] The Terminal (2004)
+[ OK ] The Terminal (2004) 1080p BrRip x264 - YIFY (129 seeds)
+Active proxies remaining: 20
+
+[90/115] Blood Diamond (2006)
+[ OK ] Blood Diamond (2006) 1080p BrRip x264 - 1.9GB - YIFY (189 seeds)
+Active proxies remaining: 20
+
+[91/115] It's Kind of a Funny Story (2010)
+[WARN] No results.
+
+[92/115] Schindler's List (1993)
+[WARN] No results.
+
+[93/115] Apollo 13 (1995)
+[ OK ] Apollo 13 1995 REMASTERED 1080p BluRay HEVC x265 5.1 BONE (100 seeds)
+Active proxies remaining: 20
+
+[94/115] Fury (2014)
+[ OK ] Fury 2014 1080p Retail Bluray AC3 5 1 (103 seeds)
+Active proxies remaining: 20
+
+[95/115] Defiance (2008)
+[ OK ] Defiance (2008) 1080p BrRip x264 - YIFY (32 seeds)
+Active proxies remaining: 20
+
+[96/115] The Pianist (2002)
+[ OK ] The Pianist (2002) 1080p BrRip x264 - YIFY (275 seeds)
+Active proxies remaining: 20
+
+[97/115] The Great Escape (1963)
+[ OK ] The.Great.Escape.1963.1080p.BluRay.x264.EAC3-SARTRE (63 seeds)
+Active proxies remaining: 20
+
+[98/115] The Core (2003)
+[ OK ] The Core (2003) 1080p BrRip x264 - YIFY (105 seeds)
+Active proxies remaining: 20
+
+[99/115] Armageddon (1998)
+[ OK ] Armageddon (1998) 1080p BrRip x264 - 2.00GB - YIFY (142 seeds)
+Active proxies remaining: 20
+
+[100/115] Apocalypto (2006)
+[ OK ] Apocalypto (2006) 1080p 5.1CH BRrip.x264 SUJAIDR (101 seeds)
+Active proxies remaining: 20
+
+[101/115] Jurassic Park (1993)
+[ OK ] Jurassic Park (1993) 1080p BrRip x264 - YIFY (419 seeds)
+Active proxies remaining: 20
+
+[102/115] The Lost World: Jurassic Park (1997)
+[ OK ] The Lost World: Jurassic Park (1997) 1080p BrRip x264 - YIFY (207 seeds)
+Active proxies remaining: 20
+
+[103/115] The Lord of the Rings: The Fellowship of the Ring (2001)
+[ OK ] Lord.of.the.Rings.Fellowship.of.Ring.2001.EXTENDED.1080p.BluRay. (718 seeds)
+Active proxies remaining: 20
+
+[104/115] Jurassic Park III (2001)
+[ OK ] Jurassic Park III (2001) 1080p BrRip x264 - YIFY (163 seeds)
+Active proxies remaining: 20
+
+[105/115] The Lord of the Rings: The Two Towers (2002)
+[ OK ] The Lord of the Rings: The Two Towers {Extended} (2002) 1080p Br (523 seeds)
+Active proxies remaining: 20
+
+[106/115] The Lord of the Rings: The Return of the King (2003)
+[ OK ] Lord.of.the.Rings.Return.of.King.2003.EXTENDED.1080p.BluRay.HEVC (122 seeds)
+Active proxies remaining: 20
+
+[107/115] Pirates of the Caribbean: The Curse of the Black Pearl (2003)
+[WARN] No results.
+
+[108/115] Pirates of the Caribbean: Dead Man's Chest (2006)
+[WARN] No results.
+
+[109/115] Pirates of the Caribbean: At World's End (2007)
+[WARN] No results.
+
+[110/115] District 9 (2009)
+[ OK ] District 9 (2009) 1080p BrRip x264 - YIFY (129 seeds)
+Active proxies remaining: 20
+
+[111/115] Pirates of the Caribbean: On Stranger Tides (2011)
+[ OK ] Pirates of the Caribbean: On Stranger Tides (2011) 1080p BrRip x (349 seeds)
+Active proxies remaining: 20
+
+[112/115] Jurassic World (2015)
+[ OK ] Jurassic World 2015 1080p BRRip x264 DTS-JYK (119 seeds)
+Active proxies remaining: 20
+
+[113/115] Pirates of the Caribbean: Dead Men Tell No Tales (2017)
+[ OK ] Pirates.Of.The.Caribbean.Dead.Men.Tell.No.Tales.2017.1080p.BluRay.H264-RBG (124 seeds)
+Active proxies remaining: 20
+
+[114/115] Mickey 17 (2025)
+[ OK ] Mickey 17 2025 1080p WEB-DL HEVC x265 5.1 BONE (689 seeds)
+Active proxies remaining: 20
+
+[115/115] The Rip (2026)
+[ OK ] The Rip (2026) [1080p] [WEBRip] [5.1] (572 seeds)
+Active proxies remaining: 20
+
+============================================================================
+FINISHED
+============================================================================
+[ OK ] 108 magnet links -> magnets.txt
+[WARN] 7 failed queries -> failed.txt
+[INFO] 20 proxies remained active at the end of the run.
