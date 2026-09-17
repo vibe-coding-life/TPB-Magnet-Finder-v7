@@ -5,18 +5,49 @@
 ![Proxy Support](https://img.shields.io/badge/Proxy-HTTP%20%7C%20SOCKS5-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-TPB Magnet Finder v7 is a Python command-line utility for processing large lists of media search queries and saving suitable magnet URIs into a clean output file.
+TPB Magnet Finder v7 is a Python command-line utility for processing a large list of media search queries and automatically collecting suitable magnet links.
 
-The script is designed around bulk automation. Add your search terms to `queries.txt`, run the program, and TPB Magnet Finder v7 handles proxy preparation, validation, search processing, result selection, magnet generation, and failed-query tracking automatically.
+## Why?
+
+The main purpose of TPB Magnet Finder v7 is simple:
+
+**instead of manually searching for every title, opening each result, copying each magnet link, and adding them to qBittorrent one by one, you can give the script your entire list and let it generate a clean `magnets.txt` file containing all of the magnet links.**
+
+You can then simply import the entire contents of `magnets.txt` into **qBittorrent** and add all of the downloads at once.
+
+The intended workflow is:
+
+```text
+Add titles to queries.txt
+        |
+        v
+Run TPB Magnet Finder v7
+        |
+        v
+Automatically find suitable results
+        |
+        v
+Generate magnets.txt
+        |
+        v
+Import all magnet links into qBittorrent
+        |
+        v
+Download everything without adding each title manually
+```
+
+This is particularly useful when working with dozens or hundreds of authorised downloads where manually searching for and adding every individual magnet would be repetitive and time-consuming.
 
 > **Use this tool only for content you are legally authorised to access, including public-domain media, freely licensed releases, open-source distributions, personal content, and other material you have permission to download.**
 
 ---
 
-## Features
+# Features
 
 * Bulk query processing from `queries.txt`
+* Generates a qBittorrent-ready list of magnet links
 * Clean magnet-only output
+* Import many magnet links into qBittorrent at once
 * Separate failed-query tracking
 * HTTP proxy support
 * SOCKS5 proxy support
@@ -37,7 +68,7 @@ The script is designed around bulk automation. Add your search terms to `queries
 
 ---
 
-## How It Works
+# How It Works
 
 TPB Magnet Finder v7 reads each non-empty line in:
 
@@ -47,21 +78,74 @@ queries.txt
 
 as a separate search query.
 
+For example:
+
+```text
+Example Movie (2004)
+Another Example (2010)
+Public Domain Film (1955)
+Another Title (1997)
+```
+
 For each query, the script:
 
-1. Sends the search request through a validated proxy.
+1. Sends the search through a validated proxy.
 2. Parses the returned results.
-3. Prefers recognised higher-quality releases.
-4. Falls back to the most seeded suitable result if required.
-5. Builds the magnet URI.
-6. Writes the magnet to `magnets.txt`.
-7. Writes unsuccessful queries to `failed.txt`.
+3. Looks for a suitable quality release.
+4. Prefers results with active seeders.
+5. Generates the corresponding magnet URI.
+6. Writes the magnet link to `magnets.txt`.
+7. Writes unsuccessful searches to `failed.txt`.
+
+Once the script has finished, `magnets.txt` can be imported into qBittorrent rather than manually adding every result individually.
 
 ---
 
-## Output Files
+# qBittorrent Workflow
 
-### `magnets.txt`
+The output format is deliberately designed to make bulk importing easy.
+
+After TPB Magnet Finder v7 finishes, open:
+
+```text
+magnets.txt
+```
+
+The file contains one magnet URI per line:
+
+```text
+magnet:?xt=urn:btih:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&dn=Example
+magnet:?xt=urn:btih:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&dn=Example2
+magnet:?xt=urn:btih:ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ&dn=Example3
+```
+
+You can copy or import these links into qBittorrent in bulk.
+
+This removes the repetitive process of:
+
+```text
+Search title
+-> open result
+-> click magnet
+-> add to qBittorrent
+-> search next title
+-> repeat
+```
+
+Instead:
+
+```text
+Prepare queries.txt
+-> run script
+-> import magnets.txt
+-> done
+```
+
+---
+
+# Output Files
+
+## `magnets.txt`
 
 Contains **only magnet URIs**.
 
@@ -72,11 +156,13 @@ magnet:?xt=urn:btih:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&dn=Example
 magnet:?xt=urn:btih:YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY&dn=Example2
 ```
 
-No movie names, comments, tabs, status messages, or additional metadata are written to this file.
+No search-query names, comments, tabs, status messages, or additional metadata are written to the file.
+
+This makes `magnets.txt` suitable for bulk importing into applications such as qBittorrent.
 
 ---
 
-### `failed.txt`
+## `failed.txt`
 
 Contains queries that could not be successfully processed.
 
@@ -88,11 +174,11 @@ Another Example (2012)
 Unknown Title (1998)
 ```
 
-This makes failed searches easy to review or retry later.
+This makes it easy to see which searches need to be retried or manually checked.
 
 ---
 
-### `proxies.txt`
+## `proxies.txt`
 
 Contains validated HTTP and SOCKS5 proxies.
 
@@ -112,7 +198,7 @@ Only validated proxies are retained.
 
 One of the main features of TPB Magnet Finder v7 is its integrated proxy management system.
 
-Before any searches begin, the program attempts to build a healthy pool of working proxies.
+Before any searches begin, the program builds a healthy pool of working proxies.
 
 ---
 
@@ -137,13 +223,13 @@ They are:
 
 Dead proxies are discarded automatically.
 
-If enough previously saved proxies still work, the program can skip fresh harvesting entirely.
+If enough previously saved proxies still work, fresh proxy harvesting can be skipped entirely.
 
 ---
 
-## Automatic Proxy Harvesting
+# Automatic Proxy Harvesting
 
-If too few saved proxies survive validation, TPB Magnet Finder v7 automatically downloads fresh candidates from multiple public proxy sources.
+If too few saved proxies survive validation, TPB Magnet Finder v7 automatically retrieves fresh candidates from multiple public proxy sources.
 
 Both:
 
@@ -154,7 +240,7 @@ SOCKS5
 
 are supported.
 
-Candidate lists are merged and duplicate entries are removed before testing.
+Candidate lists are combined and duplicates are removed before testing.
 
 The program understands proxy formats such as:
 
@@ -171,11 +257,13 @@ socks5://1.2.3.4:1080
 
 ---
 
-## Multithreaded Proxy Validation
+# Multithreaded Proxy Validation
 
-Public proxy lists often contain hundreds or thousands of dead endpoints.
+Public proxy lists often contain hundreds or thousands of endpoints, many of which are dead or unreliable.
 
-Testing them sequentially would be very slow, so TPB Magnet Finder v7 validates proxies concurrently.
+Testing them sequentially would be extremely slow.
+
+TPB Magnet Finder v7 therefore validates proxies concurrently.
 
 By default:
 
@@ -183,15 +271,15 @@ By default:
 50 proxy-checking threads
 ```
 
-can run at the same time.
+can operate simultaneously.
 
 This value can be changed in the configuration section of the script.
 
 ---
 
-## Minimum Working Proxy Requirement
+# Minimum Working Proxy Requirement
 
-The script will not begin search processing until a minimum number of working proxies have been found.
+TPB Magnet Finder v7 will not begin processing search queries until a minimum number of working proxies has been validated.
 
 Default:
 
@@ -232,11 +320,11 @@ Continue    Harvest fresh proxies
           Begin searches
 ```
 
-If the minimum cannot be reached, the script exits before starting searches.
+If the minimum cannot be reached, the script exits before processing searches.
 
 ---
 
-## Proxy Persistence
+# Proxy Persistence
 
 Once validation finishes, working proxies are saved back to:
 
@@ -246,13 +334,13 @@ proxies.txt
 
 They are stored fastest-first.
 
-On the next run, this saved pool is checked before any new proxy sources are contacted.
+On the next run, this saved pool is checked before new proxy sources are contacted.
 
-This allows a working proxy pool to be reused between sessions.
+This allows working proxies to be reused between sessions.
 
 ---
 
-## Proxy Rotation
+# Proxy Rotation
 
 Searches are distributed across the validated proxy pool.
 
@@ -260,13 +348,13 @@ If a proxy starts returning connection errors, rate limits, or server failures, 
 
 Proxies that repeatedly fail can be disabled for the remainder of the current run.
 
-This prevents one unreliable proxy from repeatedly delaying the search process.
+This prevents one unreliable endpoint from repeatedly delaying every subsequent search.
 
 ---
 
 # Result Selection
 
-When multiple results are returned, TPB Magnet Finder v7 attempts to choose a useful release automatically.
+When several results are returned, TPB Magnet Finder v7 attempts to choose a suitable release automatically.
 
 It recognises common quality indicators including:
 
@@ -304,19 +392,19 @@ Proxies are deduplicated using:
 protocol + IP address + port
 ```
 
-This prevents the same endpoint from being tested repeatedly.
+This prevents the same endpoint from being unnecessarily tested multiple times.
 
 ## Magnet Deduplication
 
 Generated magnet links are tracked during the current run.
 
-The same magnet will not be added to `magnets.txt` more than once.
+The same magnet will not be written to `magnets.txt` more than once.
 
 ---
 
 # Progress Saving
 
-TPB Magnet Finder v7 saves progress during execution.
+TPB Magnet Finder v7 saves progress throughout execution.
 
 After successful and failed searches, the current contents of:
 
@@ -327,18 +415,18 @@ failed.txt
 
 are updated.
 
-If the script is interrupted with `Ctrl+C`, completed results are preserved.
+If the script is interrupted using `Ctrl+C`, previously completed results remain saved.
 
 ---
 
 # Coloured Terminal Output
 
-The script uses `colorama` to make terminal output easier to read.
+The script uses `colorama` to make command-line output easier to follow.
 
-Typical status colours are used for:
+Different colours are used for:
 
 * successful operations
-* informational messages
+* information
 * warnings
 * failures
 * proxy validation
@@ -367,7 +455,7 @@ https://www.python.org/downloads/
 
 On Windows, ensure Python is added to your system PATH during installation.
 
-Verify the installation:
+Verify it with:
 
 ```bash
 python --version
@@ -383,7 +471,7 @@ Run:
 python -m pip install colorama "requests[socks]"
 ```
 
-On some systems:
+On some Linux/macOS systems:
 
 ```bash
 python3 -m pip install colorama "requests[socks]"
@@ -393,7 +481,7 @@ python3 -m pip install colorama "requests[socks]"
 
 # Directory Structure
 
-A typical project folder looks like:
+A typical directory looks like:
 
 ```text
 TPB-Magnet-Finder/
@@ -412,7 +500,7 @@ tpb_magnet_finder.py
 queries.txt
 ```
 
-The other files are created automatically.
+The remaining files are generated automatically.
 
 ---
 
@@ -432,11 +520,21 @@ Another Example (2010)
 Public Domain Film (1955)
 ```
 
-Then run:
+Run:
 
 ```bash
 python tpb_magnet_finder.py
 ```
+
+After it completes:
+
+```text
+magnets.txt
+```
+
+contains the successful magnet links.
+
+Import those links into qBittorrent and add the downloads in bulk instead of manually searching for and adding every title separately.
 
 ---
 
@@ -459,7 +557,8 @@ When launched, TPB Magnet Finder v7 performs the following sequence:
 12. Select suitable results
 13. Save magnet links to magnets.txt
 14. Save unsuccessful queries to failed.txt
-15. Preserve progress during the run
+15. Preserve progress throughout the run
+16. Import magnets.txt into qBittorrent
 ```
 
 ---
@@ -471,7 +570,7 @@ Important settings are located near the top of the Python script.
 | Setting                             | Purpose                                                            |
 | ----------------------------------- | ------------------------------------------------------------------ |
 | `MIN_WORKING_PROXIES`               | Minimum number of validated proxies required before searches start |
-| `MAX_PROXY_THREADS`                 | Maximum concurrent proxy validation threads                        |
+| `MAX_PROXY_THREADS`                 | Maximum concurrent proxy-validation threads                        |
 | `PROXY_TEST_BATCH_SIZE`             | Number of fresh proxies tested in each batch                       |
 | `MAX_SAVED_WORKING_PROXIES`         | Maximum number of validated proxies retained                       |
 | `PROXY_CONNECT_TIMEOUT`             | Maximum proxy connection time                                      |
@@ -528,7 +627,7 @@ SEARCHING 20 QUERIES
 [ OK ] Another Example 2010 WEB-DL (84 seeds)
 ```
 
-Actual results will vary depending on network conditions and proxy availability.
+Actual results vary depending on network conditions, search results, and proxy availability.
 
 ---
 
@@ -558,7 +657,7 @@ instead of calling `pip` directly.
 
 ---
 
-## SOCKS proxy errors
+## SOCKS Proxy Errors
 
 Make sure PySocks is installed:
 
@@ -568,11 +667,11 @@ python -m pip install "requests[socks]"
 
 ---
 
-## Fewer than 25 proxies are found
+## Fewer Than 25 Proxies Are Found
 
-Public proxies are unreliable and frequently disappear.
+Public proxies are inherently unreliable and frequently disappear.
 
-Possible options:
+Possible options include:
 
 * run the script again later
 * add additional proxy sources
@@ -582,17 +681,17 @@ Possible options:
 
 ---
 
-## Searches do not start
+## Searches Do Not Start
 
-The script intentionally refuses to begin searching unless:
+The script intentionally refuses to begin searching unless the configured:
 
 ```text
 MIN_WORKING_PROXIES
 ```
 
-working proxies have been validated.
+threshold has been reached.
 
-Check the console output to see how many working proxies were found.
+Check the terminal output to see how many proxies passed validation.
 
 ---
 
@@ -600,9 +699,9 @@ Check the console output to see how many working proxies were found.
 
 Public proxies are inherently unreliable.
 
-A proxy that works today may be unavailable minutes or hours later. Because of this, TPB Magnet Finder v7 continuously treats the proxy pool as disposable and rebuildable rather than assuming saved proxies will remain online permanently.
+A proxy working now may become unavailable minutes or hours later. TPB Magnet Finder v7 therefore treats the proxy pool as disposable and rebuildable rather than assuming saved proxies will remain online indefinitely.
 
-Network speed alone does not determine how fast proxy validation completes. The response time of the remote proxy servers is usually the main limiting factor.
+Network connection speed is also not the only factor affecting proxy testing. The response time and reliability of individual remote proxies are usually the biggest limitations.
 
 ---
 
@@ -624,7 +723,7 @@ The user is responsible for ensuring that their use of the software complies wit
 
 # License
 
-Add the license you want to use for your repository here.
+Add your preferred licence to the repository.
 
 For example:
 
@@ -632,4 +731,4 @@ For example:
 MIT License
 ```
 
-If you intend to publish the project publicly, adding a `LICENSE` file to the repository is recommended.
+If publishing the project publicly, adding a separate `LICENSE` file to the repository is recommended.
